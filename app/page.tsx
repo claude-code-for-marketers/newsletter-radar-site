@@ -5,6 +5,8 @@ const NAV = [
   { label: "Coverage", href: "#coverage" },
 ];
 
+const CONTACT_SALES_PATH = "/contact-sales";
+
 const PILLARS = [
   {
     tag: "01 · COMPETITOR FOOTPRINT",
@@ -71,7 +73,7 @@ export default function Home() {
             ))}
           </nav>
           <a
-            href="#access"
+            href={CONTACT_SALES_PATH}
             className="font-mono text-xs text-accent transition-colors hover:text-foreground"
           >
             request access →
@@ -95,7 +97,7 @@ export default function Home() {
           </p>
           <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
             <a
-              href="#access"
+              href={CONTACT_SALES_PATH}
               className="bg-accent px-5 py-2.5 font-mono text-sm font-medium text-[#06140b] transition-opacity hover:opacity-90"
             >
               Request early access
@@ -246,10 +248,10 @@ export default function Home() {
               you in.
             </p>
             <a
-              href="mailto:hello@newsletterradar.com?subject=Early%20access&body=Vertical:%0ACompetitor%20to%20look%20up%20first:"
+              href={CONTACT_SALES_PATH}
               className="mt-8 inline-block bg-accent px-5 py-2.5 font-mono text-sm font-medium text-[#06140b] transition-opacity hover:opacity-90"
             >
-              hello@newsletterradar.com →
+              Contact sales →
             </a>
           </div>
         </section>
