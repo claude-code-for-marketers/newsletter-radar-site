@@ -1,7 +1,10 @@
+import Link from "next/link";
+
 const NAV = [
   { label: "How it works", href: "#how" },
   { label: "Example", href: "#example" },
   { label: "Compare", href: "#compare" },
+  { label: "Blog", href: "/blog" },
   { label: "Coverage", href: "#coverage" },
 ];
 
@@ -61,23 +64,23 @@ export default function Home() {
       {/* ---------- header ---------- */}
       <header className="sticky top-0 z-10 border-b border-line bg-background/80 backdrop-blur">
         <div className="mx-auto flex h-14 max-w-4xl items-center justify-between px-6">
-          <a href="#top" className="flex items-center gap-2 font-mono text-sm">
+          <Link href="#top" className="flex items-center gap-2 font-mono text-sm">
             <span className="text-accent">●</span>
             <span className="font-medium tracking-tight">newsletter radar</span>
-          </a>
+          </Link>
           <nav className="hidden items-center gap-7 font-mono text-xs text-muted sm:flex">
             {NAV.map((item) => (
-              <a key={item.href} href={item.href} className="transition-colors hover:text-foreground">
+              <Link key={item.href} href={item.href} className="transition-colors hover:text-foreground">
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
-          <a
+          <Link
             href={CONTACT_SALES_PATH}
             className="font-mono text-xs text-accent transition-colors hover:text-foreground"
           >
             request access →
-          </a>
+          </Link>
         </div>
       </header>
 
@@ -96,18 +99,18 @@ export default function Home() {
             Competitor footprint, share-of-voice, and a ranked placement plan.
           </p>
           <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <a
+            <Link
               href={CONTACT_SALES_PATH}
               className="bg-accent px-5 py-2.5 font-mono text-sm font-medium text-[#06140b] transition-opacity hover:opacity-90"
             >
               Request early access
-            </a>
-            <a
+            </Link>
+            <Link
               href="#example"
               className="border border-line px-5 py-2.5 font-mono text-sm text-foreground transition-colors hover:border-muted"
             >
               See a sample lookup
-            </a>
+            </Link>
           </div>
         </section>
 
@@ -247,12 +250,12 @@ export default function Home() {
               buy in and one competitor you’d want to look up first — we’ll prioritize coverage and get
               you in.
             </p>
-            <a
+            <Link
               href={CONTACT_SALES_PATH}
               className="mt-8 inline-block bg-accent px-5 py-2.5 font-mono text-sm font-medium text-[#06140b] transition-opacity hover:opacity-90"
             >
               Contact sales →
-            </a>
+            </Link>
           </div>
         </section>
       </main>
@@ -263,7 +266,12 @@ export default function Home() {
           <span>
             <span className="text-accent">●</span> newsletter radar
           </span>
-          <span>sponsorship intelligence for the buy side · status: pre-launch</span>
+          <span className="flex flex-wrap gap-x-4 gap-y-2">
+            <span>sponsorship intelligence for the buy side · status: pre-launch</span>
+            <Link href="/blog" className="text-accent transition-colors hover:text-foreground">
+              blog
+            </Link>
+          </span>
         </div>
       </footer>
     </div>
