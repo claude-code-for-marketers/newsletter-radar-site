@@ -32,3 +32,67 @@ body {
   background: var(--accent);
   color: #06140b;
 }
+
+.markdown {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  color: var(--foreground);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.markdown h1 {
+  margin-top: 0;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.markdown h2 {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.markdown h3 {
+  margin-top: 2rem;
+  font-size: 1.125rem;
+  line-height: 1.35;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  margin-top: 1.25rem;
+}
+
+.markdown ul,
+.markdown ol {
+  padding-left: 1.25rem;
+}
+
+.markdown li {
+  margin-top: 0.5rem;
+}
+
+.markdown ul {
+  list-style: disc;
+}
+
+.markdown ol {
+  list-style: decimal;
+}
+
+.markdown blockquote {
+  border-left: 2px solid var(--accent);
+  color: var(--foreground);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  padding-left: 1rem;
+}
